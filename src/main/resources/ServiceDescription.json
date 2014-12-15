@@ -1,0 +1,19 @@
+{
+"id" : "1",
+"name" : "Kafka",
+"description" : "Kafka service borker",
+"bindable" : true,
+"tags" : ["kafka","messaging"],
+"plans" : [
+ {
+ "id" : 1,
+ "name" : "development",
+ "description" : "Shared broker access, provides access to the brokers and the single instance zookeeper in the cluster"
+ }
+ ],
+"metadata" : {
+"longDescription" : "Kafka service broker",
+
+"imageUrl" : "https://raw.githubusercontent.com/viniciusccarvalho/cf-oracle-servicebroker/master/src/main/resources/static/images/oracle_icon.jpg"
+}
+}
