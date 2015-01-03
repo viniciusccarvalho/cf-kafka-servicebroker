@@ -37,6 +37,7 @@ dependencies {
     compile("org.springframework:spring-context-support")
     compile("org.apache.curator:curator-framework:2.7.0")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+	testCompile("org.apache.curator:curator-test:2.7.0")
 	//testCompile("com.h2database:h2:1.4.179")
 }
 
