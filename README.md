@@ -9,3 +9,4 @@ How does it work?
 =================
 
 This broker could not be simpler. Kafka does not have a notion of multi tenancy or even authentication. Clients that create instances or bind apps to it, only receive a json credentials object with the zookeeper url (for consumers) and a list of brokers (for producers). The broker stores the subscritptions inside zookeeper under the /sb/ path.
+
