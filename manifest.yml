@@ -1,0 +1,10 @@
+---
+applications:
+- name: kafka-servicebroker
+  memory: 1024M 
+  instances: 1
+  host: kafka-servicebroker
+  path: ./build/libs/kafka-service-broker-1.0.0.jar
+  env:
+   ZOOKEEPER_URL: "192.168.5.121:2181"
+   MANAGER_URL: "http://kafka-manager.north.fe.pivotal.io"

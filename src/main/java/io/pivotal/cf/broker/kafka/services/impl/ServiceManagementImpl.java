@@ -40,12 +40,14 @@ public class ServiceManagementImpl implements ServiceManagement {
 	
 	@Override
 	public ServiceInstance createInstance(CreateServiceInstanceRequest serviceRequest) {
+		String dashboard = env.getProperty("manager.url") != null ? env.getProperty("manager.url") : "";
 		ServiceInstance instance = new ServiceInstance(serviceRequest.getServiceInstanceId(),
 													   serviceRequest.getServiceDefinitionId(),
 													   serviceRequest.getPlanId(),
 													   serviceRequest.getOrganizationGuid(),
 													   serviceRequest.getSpaceGuid(), 
-													   "");
+													   dashboard);
+		
 		if(client.exists(INSTANCES_PATH+"/"+instance.getId())){
 			throw new IllegalStateException("There's already an instance of this service");
 		}
